@@ -2,6 +2,7 @@ nsswitch
 ========
 
 Role which helps to manage the nsswitch.conf file.
+Adapted and fixed for Python3 from https://github.com/CSCfi/ansible-nsswitch
 
 
 Example
