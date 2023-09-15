@@ -8,7 +8,6 @@ nsswitch_file_location: /etc/nsswitch.conf
 # Aliases
 nsswitch_aliases:
   - files
-  - nisplus
 
 # Automount
 nsswitch_automount:
@@ -16,8 +15,6 @@ nsswitch_automount:
 
 # Bootparams
 nsswitch_bootparams:
-  - nisplus
-  - '[NOTFOUND=return]'
   - files
 
 # Ethers
@@ -27,7 +24,7 @@ nsswitch_ethers:
 # Group
 nsswitch_group:
   - files
-  - sss
+  - systemd
 
 # Hosts
 nsswitch_hosts:
@@ -41,13 +38,11 @@ nsswitch_initgroups:
 
 # Net groups
 nsswitch_netgroup:
-  - nisplus
-  - sss
+  - files
 
 # Netmasks
 nsswitch_netmasks:
   - files
-  - sss
 
 # Networks
 nsswitch_networks:
@@ -56,7 +51,7 @@ nsswitch_networks:
 # Passwd
 nsswitch_passwd:
   - files
-  - sss
+  - systemd
 
 # Protocols
 nsswitch_protocols:
@@ -64,7 +59,7 @@ nsswitch_protocols:
 
 # Publickey
 nsswitch_publickey:
-  - nisplus
+  - files
 
 # RPC
 nsswitch_rpc:
@@ -73,12 +68,10 @@ nsswitch_rpc:
 # Services
 nsswitch_services:
   - files
-  - sss
 
 # Shadow
 nsswitch_shadow:
   - files
-  - sss
 
 # List of all databases
 nsswitch__all:
